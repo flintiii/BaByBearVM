@@ -1,5 +1,5 @@
 #!/bin/bash
-version="0.03"
+version="0.035"
 #
 # Fri 09 Jun 2023 03:02:52 PM EDT  pflint 
 # Visual Bash Script to be used with
@@ -20,13 +20,13 @@ cat $0 | grep '^## ' | sed -e 's/##//'
 ## Theis is released under GPL I
 ## The syntax is:
 ## - tsg.sh sane         - Checks that you have the stuff you need. 
-## - tsg.sh install      - installs VMulator.
+## - tsg.sh vmem         - installs VMulator.
 ## - tsg.sh flink        - Patches to current user path. 
 ## - tsg.sh flunk        - Removes from current user path. 
 ## - tsg.sh rdome 	     - maked flint user/directory and populate github
 ## - tsg.sh gitstuff 	 - install git based elements 
 ## - tsg.sh getgh1 	     - install gh github cli
-## - tsg.sh unstall      - removes VMulator.
+## - tsg.sh uvmem        - removes VMulator.
 ##    in all of these, Output is delivered to the screen...
 ## *** NOTE *** These commands need not be run as root, but installing sane code!
 ##
