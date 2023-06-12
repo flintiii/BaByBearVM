@@ -1,7 +1,7 @@
 #!/bin/bash
-version="0.035"
+version="0.05"
 #
-# Fri 09 Jun 2023 03:02:52 PM EDT  pflint 
+# Fri 12 Jun 2023 03:02:52 PM EDT  pflint 
 # Visual Bash Script to be used with
 # Ten Statement Git presentation
 # This can take about half hour...
@@ -21,12 +21,11 @@ cat $0 | grep '^## ' | sed -e 's/##//'
 ## The syntax is:
 ## - tsg.sh sane         - Checks that you have the stuff you need. 
 ## - tsg.sh vmem         - installs VMulator.
+## - tsg.sh uvmem        - removes VMulator.
+## - tsg.sh ibmgs        - terminal to VMulator.
 ## - tsg.sh flink        - Patches to current user path. 
 ## - tsg.sh flunk        - Removes from current user path. 
-## - tsg.sh rdome 	     - maked flint user/directory and populate github
-## - tsg.sh gitstuff 	 - install git based elements 
-## - tsg.sh getgh1 	     - install gh github cli
-## - tsg.sh uvmem        - removes VMulator.
+## - tsg.sh getgh        - install gh github cli
 ##    in all of these, Output is delivered to the screen...
 ## *** NOTE *** These commands need not be run as root, but installing sane code!
 ##
@@ -42,120 +41,82 @@ uroot
 } # Test: tsg.sh dummy
 #
 #
-function doroot(){
-#* function doroot - installation elements that require root
+function vmem(){
+#* function vmem - install VM EMulater http://docbox.flint.com:8081/vmulater/
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
-apt-get update && \
-apt-get --yes install git && \
-apt-get --yes install gh && \
-apt-get install --yes python3 \
-python3-pyqt5 \
-python3-pyqt5.qtwebengine \
-python3-pip
+if test -f "vmem_essentials"; then
+    echo "vmem_essentials exists."; spause
+fi
 #
-apt-get install python-pip
-apt-get install iputils-ping
+sudo apt-get -y install x3270
+sudo apt-get -y install docker.io
+sudo docker run -it flintiii/vm370:latest /bin/bash
 #
-# apt-get update;
-# apt-get install -y python3 \
-# python3-pyqt5 \
-# python3-pyqt5.qtwebengine\ /usr/local/lib/python3.10/dist-packages/
-# python3-pip
+} # Test: tsg.sh vmem
 #
-} # Test: tsg.sh doroot
 #
-function rdome(){
-#* function rdome - maked flint user/directory and populate github
+function uvmem(){
+#* function uvmem - uninstall VM EMulater http://docbox.flint.com:8081/vmulater/
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
-sudo useradd flint
-mkdir -p /home/flint
-cd /home/flint
-} # Test: tsg.sh dome
+rm vmem_essentials
+sudo docker ps -a
+IM=$(docker ps -a -q); echo $IM
+sudo docker stop $IM
+sudo docker rm -f $IM
+sudo docker rmi $IM
+# sudo docker image rm  $IM
+sudo apt-get -y remove x3270
+sudo dpkg -P 3270-common bridge-utils containerd pigz runc ubuntu-fan xfonts-x3270-misc
+echo "x3270 removed"
+sudo apt-get -y remove docker.io
+echo "docker.io removed"
+apt-get -y autoremove
+} # Test: tsg.sh uvmem
 #
 #
-function gitstuff(){
-#* function gitstuff - install git based elements
+function gandt(){
+#* function gandt - Store variables and test ping
+echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
+uroot
+IM=$(docker ps -a -q); echo $IM
+echo $IM > vmem_essentials
+spause
+IP=$(docker inspect  -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $IM); echo $IP
+echo $IP >> vmem_essentials
+ping -c 2 $IP
+spause
+} # Test: tsg.sh dummy
+#
+#
+function ibmgs(){
+#* function ibmgs - test and run 3270 terminal emulator
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 # uroot
-git clone git@github.com:flintiii/bin.git
-git clone git@github.com:andreikop/qutepart.git
-git clone git@github.com:andreikop/enki.git
-git clone git@github.com:flintiii/bin.git
-} # Test: tsg.sh gitstuff
-#
-#
-function chkeinki(){
-#* function chkeinki - Rename and fill stuff in between braces
-echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
-uroot
- apt-get install python3 libqt5svg5 python3-pyqt5 python3-pyqt5.qtwebengine python3-markdown python3-docutils ctags
-   pip3 install -r requirements.txt
-} # Test: finagrade.sh chkeinki
+echo "ok then"
+IM=$(head -1 vmem_essentials); echo $IM
+IP=$(tail -1 vmem_essentials); echo $IP
+x3270 -model 3279-3 $IP  3270 &
+} # Test: tsg.sh ibmgs
 #
 #
 function getgh(){
 #* function getgh - install gh github cli
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
-# uroot
-# SOURCE:https://github.com/cli/cli/blob/trunk/docs/install_linux.mdcc1
-type -p curl >/dev/null || sudo apt install curl -y
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-&& sudo apt update \
-&& sudo apt install gh -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y
+uroot
+apt-get install gh
 #
 } # Test: tsg.sh getgh
 #
-#
-function shouldgo(){
-#* function shouldgo - the final steps. Enki should go...
-echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
-# uroot
-python3 setup.py install
-python3 -m enki
-} # Test: tsg.sh shouldgo
-#
-function getgh1(){
-#* function function getgh1 - install gh github cli
-echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
-uroot
-<type -p curl >/dev/null || sudo apt install curl -y
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-&& sudo apt update \
-&& sudo apt install gh -y
-} # Test: tsg.sh getgh1
 #
 #
 function security(){
 #* function security - gets your security stuff working...
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
-scp flint@192.168.1.242:~flint/.ssh/id_rsa* ~flint/.ssh/. 
-gh auth login --hostname flintiii --with-token "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"
-
-gh auth login --hostname flintiii
 } # Test: tsg.sh security
 #
-function pfinst(){
-#* function pfinst - user level installs
-echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
-# uroot
-# pflint
-# 
-# pip install Python-Markdown     /# For Markdown preview
-# pip install Docutils            /# For reStructuredText preview
-# pip install ctags               /# For navigation in file
-# pip install regex               /# For preview synchronization
-# pip install CodeChat            /# For source code to HTML translation (literate programming)
-# pip install Sphinx              /# To build Sphinx documentation.
-# pip install Flake8              /# To lint your Python code.
-#
-} # Test: tsg.sh pfinst
 #
 #*####################################STANDARD AND MAYBE USEFUL FUNCTIONS BELOW
 #
@@ -286,22 +247,22 @@ sudo rm /usr/local/sbin/$FNAME
 #
 #*###################################### MAIN ENTRY POINT AND COMPOUND CASE
 #
-#* Evaluator Routine
+#* Evaluator Routine#!/bin/bash
+# pflint
+# 
 # Note the evaluator allows for many cases and error checking...
 #d ARGS=$#         # carries the number of args into the functions...
 #D echo $#"     "$1"    "$2"    "$3"    "$ARGS ;spause 
-if [ "$#" -eq "1" ] && [ "$1" = "help"     ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "dummy"      ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "doroot"      ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "rdome"    ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "gitstuff"      ]; then ARGS="1"; fi
-if [ "$#" -eq "2" ] && [ "$1" = "getgh"       ]; then ARGS="2"; fi
-if [ "$#" -eq "2" ] && [ "$1" = "shouldgo"       ]; then ARGS="2"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "getgh1"     ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "security"      ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "spause"      ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "sane"        ]; then ARGS="1"; fi
-if [ "$#" -eq "1" ] && [ "$1" = "help"        ]; then ARGS="9"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "help"      ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "dummy"     ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "vmem"      ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "uvmem"     ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "ibmgs"     ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "getgh"     ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "gandt"     ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "spause"    ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "sane"      ]; then ARGS="1"; fi
+if [ "$#" -eq "1" ] && [ "$1" = "help"      ]; then ARGS="9"; fi
 # this tests the evaluator...
 #D echo $#"     "$1"    "$2"    "$3"    "$ARGS ;spause 
 #
@@ -324,21 +285,4 @@ esac # End main loop. TEST: ?fill in test?
 #
 # echo " "; echo "On "$(date +%F\ %r) $0" version "$version" stops"
 #debug echo  "That's all folks!!"
-# # run the command and settle variables
-    "9") var3=$3; var2=$2;  $1 ;;       # run the command and settle variables
-    "9") var3=grep '^\#\*' tsg.sh$3; var2=$2;  $1 ;;       # run the command and settle variables
-      *) clear; cat $0 | grep '^## '| sed -e 's/##//'; exit 1;; # Anything else run help and exit...
-esac # End main loop. TEST: ?fill in test?
-#
-# echo " "; echo "On "$(date +%F\ %r) $0" version "$version" stops"
-#debug echo  "That's all folks!!"
-#
-# echo "road closed at line $LINENO"
-# 2>/dev/null << cut
-#
-# cut
-# echo "Hello from line $LINENO!"
-
-
-}}}
 
