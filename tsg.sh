@@ -1,5 +1,5 @@
 #!/bin/bash
-version="0.05"
+version="0.06"
 #
 # Fri 12 Jun 2023 03:02:52 PM EDT  pflint 
 # Visual Bash Script to be used with
@@ -21,8 +21,9 @@ cat $0 | grep '^## ' | sed -e 's/##//'
 ## The syntax is:
 ## - tsg.sh sane         - Checks that you have the stuff you need. 
 ## - tsg.sh vmem         - installs VMulator.
-## - tsg.sh uvmem        - removes VMulator.
+## - tsg.sh gandt        - terminal to VMulator.
 ## - tsg.sh ibmgs        - terminal to VMulator.
+## - tsg.sh uvmem        - removes VMulator.
 ## - tsg.sh flink        - Patches to current user path. 
 ## - tsg.sh flunk        - Removes from current user path. 
 ## - tsg.sh getgh        - install gh github cli
@@ -48,7 +49,7 @@ uroot
 if test -f "vmem_essentials"; then
     echo "vmem_essentials exists."; spause
 fi
-#
+#gandt
 sudo apt-get -y install x3270
 sudo apt-get -y install docker.io
 sudo docker run -it flintiii/vm370:latest /bin/bash
@@ -77,7 +78,7 @@ apt-get -y autoremove
 #
 #
 function gandt(){
-#* function gandt - Store variables and test ping
+#* function gandt - get IP variables and test ping
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
 IM=$(docker ps -a -q); echo $IM
