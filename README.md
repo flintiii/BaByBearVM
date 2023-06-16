@@ -1,4 +1,4 @@
-<h1 id="vmulater---the-dreaded-demonstration">VMulatER - The Dreaded Demonstration</h1>
+<h1 id="vmemulater---the-dreaded-demonstration">VMEMulater - The Dreaded Demonstration</h1>
 <dl>
 <dt>Info</dt>
 <dd><p>See &lt;<a href="http://docbox.flint.com:8081/vmulater">http://docbox.flint.com:8081/vmulater</a>&gt; for supporting docs.</p>
@@ -10,7 +10,7 @@
 <dd><p>$Date: Fri 16 Jun 2023 07:45:13 AM EDT $</p>
 </dd>
 <dt>Revision</dt>
-<dd><p>$Revision: 0.009 $</p>
+<dd><p>$Revision: 0.014 $</p>
 </dd>
 <dt>Description</dt>
 <dd><p>This is a "docinfo block"</p>
@@ -18,9 +18,15 @@
 </dl>
 <p>This is the code you need to type to do the demo:</p>
 <p>Step by step:</p>
-<pre><code>git clone https://github.com/flintiii/tsg.git
-cd ~/tsg
-./tsg.sh</code></pre>
+<pre><code>git clone https://github.2082  git add README.md </code></pre>
+<blockquote>
+<p>2083 git commit -m "10h try use pandoc README.rst &gt; README.md" 2084 git push; git log</p>
+</blockquote>
+<dl>
+<dt>com/flintiii/tsg.git</dt>
+<dd><p>cd ~/tsg ./tsg.sh</p>
+</dd>
+</dl>
 <table>
 <colgroup>
 <col style="width: 100%" />
