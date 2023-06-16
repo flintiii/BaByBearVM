@@ -20,8 +20,37 @@
 <p>Step by step:</p>
 <pre><code>git clone https://github.com/flintiii/tsg.git
 cd ~/tsg
-./tsg.sh
-./tst.sh sane
+./tsg.sh</code></pre>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>**<strong>*DOCUMENTATION</strong>***</p>
+</blockquote>
+<div class="line-block">You get this when you put in the wrong number or type of arguments...<br />
+The name of this program is tsg.sh, an extention of unix find.<br />
+Theis is released under GPL I<br />
+The syntax is:<br />
+- tsg.sh sane - Checks that you have the stuff you need.<br />
+- tsg.sh vmem - installs VMulator.<br />
+- tsg.sh gandt - terminal to VMulator.<br />
+- tsg.sh ibmgs - terminal to VMulator.<br />
+- tsg.sh uvmem - removes VMulator.<br />
+- tsg.sh flink - Patches to current user path.<br />
+- tsg.sh flunk - Removes from current user path.<br />
+- tsg.sh getgh - install gh github cli<br />
+   in all of these, Output is delivered to the screen...<br />
+<strong>* NOTE</strong>* These commands need not be run as root, but installing sane code!<br />
+For structure information type "grep '^#*' tsg.sh"<br />
+</div></td>
+</tr>
+</tbody>
+</table>
+<p>Next steps:</p>
+<pre><code>./tst.sh sane
 sudo ./tst.sh getgh
 sudo ./tst.sh vmem
 Open another terminal window
