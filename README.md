@@ -28,25 +28,38 @@ cd ~/tsg
 <tbody>
 <tr class="odd">
 <td><blockquote>
-<p>**<strong>*DOCUMENTATION</strong>***</p>
-</blockquote>
-<div class="line-block">You get this when you put in the wrong number or type of arguments...<br />
-The name of this program is tsg.sh, an extention of unix find.<br />
-Theis is released under GPL I<br />
-The syntax is:<br />
-- tsg.sh sane - Checks that you have the stuff you need.<br />
-- tsg.sh vmem - installs VMulator.<br />
-- tsg.sh gandt - terminal to VMulator.<br />
-- tsg.sh ibmgs - terminal to VMulator.<br />
-- tsg.sh uvmem - removes VMulator.<br />
-- tsg.sh flink - Patches to current user path.<br />
-- tsg.sh flunk - Removes from current user path.<br />
-- tsg.sh getgh - install gh github cli<br />
-   in all of these, Output is delivered to the screen...<br />
-<strong>* NOTE</strong>* These commands need not be run as root, but installing sane code! For structure information type "grep '^#*' tsg.sh"</div></td>
+<p>View the Program output below:</p>
+</blockquote></td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>***DOCUMENTATION***</p>
+</blockquote>
+<p>The name of this program is tsg.sh, an extention of unix find.</p>
+<p>This is released under GPL I</p>
+<p>The syntax is:</p>
+<ul>
+<li>tsg.sh sane - Checks that you have the stuff you need.</li>
+<li>tsg.sh vmem - installs VMulator.</li>
+<li>tsg.sh gandt - terminal to VMulator.</li>
+<li>tsg.sh ibmgs - terminal to VMulator.</li>
+<li>tsg.sh uvmem - removes VMulator.</li>
+<li>tsg.sh flink - Patches to current user path.</li>
+<li>tsg.sh flunk - Removes from current user path.</li>
+<li>tsg.sh getgh - install gh github cli</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
 <p>Next steps:</p>
 <pre><code>./tst.sh sane
 sudo ./tst.sh getgh
