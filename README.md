@@ -17,7 +17,7 @@
 </dd>
 </dl>
 <p>This is the code you need to type to do the demo:</p>
-<p>Step by step ____________:</p>
+<p>Step by step:</p>
 <pre><code>git clone https://github.com/flintiii/tsg.git
 cd ~/tsg
 ./tsg.sh
