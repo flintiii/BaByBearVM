@@ -43,9 +43,7 @@ The syntax is:<br />
 - tsg.sh flunk - Removes from current user path.<br />
 - tsg.sh getgh - install gh github cli<br />
    in all of these, Output is delivered to the screen...<br />
-<strong>* NOTE</strong>* These commands need not be run as root, but installing sane code!<br />
-For structure information type "grep '^#*' tsg.sh"<br />
-</div></td>
+<strong>* NOTE</strong>* These commands need not be run as root, but installing sane code! For structure information type "grep '^#*' tsg.sh"</div></td>
 </tr>
 </tbody>
 </table>
