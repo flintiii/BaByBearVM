@@ -1,13 +1,12 @@
-VMEMulater
-
-The Dreaded Demonstration
+                            VMEMulater
+                    The Dreaded Demonstration
 
 This is the guidance to help get a Visual Bash Shell script \"tsg.sh\"
 from github.com to a local directory and repository.
 
 Step by step:
 
-Open a terminal - Copy and paste:pandoc -s README.odt -t markdown -o README.md
+Open a terminal - Copy and paste:
 
 1.  rm -rf main.zip tsg tsg-main
 2.  Wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip
