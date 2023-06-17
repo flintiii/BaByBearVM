@@ -1,5 +1,5 @@
 #!/bin/bash
-version="0.06"
+version="0.07"
 #
 # Fri 12 Jun 2023 03:02:52 PM EDT  pflint 
 # Visual Bash Script to be used with
@@ -46,8 +46,8 @@ function vmem(){
 #* function vmem - install VM EMulater http://docbox.flint.com:8081/vmulater/
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
-if test -f "vmem_essentials"; then
-    echo "vmem_essentials exists."; spause
+if test -f "/tmp/vmem_essentials"; then
+    echo "/tmp/vmem_essentials exists."; spause
 fi
 #gandt
 sudo apt-get -y install x3270
@@ -61,7 +61,7 @@ function uvmem(){
 #* function uvmem - uninstall VM EMulater http://docbox.flint.com:8081/vmulater/
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
-rm vmem_essentials
+rm /tmp/vmem_essentials
 sudo docker ps -a
 IM=$(docker ps -a -q); echo $IM
 sudo docker stop $IM
@@ -82,10 +82,10 @@ function gandt(){
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 uroot
 IM=$(docker ps -a -q); echo $IM
-echo $IM > vmem_essentials
+echo $IM > /tmp/vmem_essentials
 spause
 IP=$(docker inspect  -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $IM); echo $IP
-echo $IP >> vmem_essentials
+echo $IP >> /tmp/vmem_essentials
 ping -c 2 $IP
 spause
 } # Test: tsg.sh dummy
@@ -96,8 +96,8 @@ function ibmgs(){
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
 # uroot
 echo "ok then"
-IM=$(head -1 vmem_essentials); echo $IM
-IP=$(tail -1 vmem_essentials); echo $IP
+IM=$(head -1 /tmp/vmem_essentials); echo $IM
+IP=$(tail -1 /tmp/vmem_essentials); echo $IP
 x3270 -model 3279-3 $IP  3270 &
 } # Test: tsg.sh ibmgs
 #
