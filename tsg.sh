@@ -28,7 +28,7 @@ cat $0 | grep '^## ' | sed -e 's/##//'
 ## - tsg.sh flunk        - Removes from current user path. 
 ## - tsg.sh getgh        - install gh github cli
 ##    in all of these, Output is delivered to the screen...
-## *** NOTE *** These commands need not be run as root, but installing sane code!
+## *** NOTE *** Some commands need not be run as root, but installing code!
 ##
 ## For structure information type "grep '^\#\*' tsg.sh"
 #
@@ -144,6 +144,8 @@ function spause(){
 function sane(){
 #* function sane - check location of vital files and programs, sanity check
 echo "This is the \""$FUNCNAME"\" function in "$0" version "$version #debug
+echo "checking architecture, must be debian based"
+if [ -f /usr/local/bin/apt ]; then echo "System Debian Based";else echo "This program needs Debian Architecture"; exit 1; fi
 rm -rf need > /dev/null
 for prog in openssh-server gparted nautilus pluma git snmp gedit "less" "wget" 
 #d ;do echo $prog; done
