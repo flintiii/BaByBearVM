@@ -1,5 +1,5 @@
 #!/bin/bash
-version="0.07"
+version="0.08"
 #
 # Fri 12 Jun 2023 03:02:52 PM EDT  pflint 
 # Visual Bash Script to be used with
