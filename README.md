@@ -9,9 +9,9 @@ Step by step:
 Open a terminal - Copy and paste:
 
 1.  rm -rf main.zip tsg tsg-main
-2.  Wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip
+2.  wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip
 3.  mv tsg-main tsg
-4.  Unzip main.zip
+4.  unzip main.zip
 5.  mv tsg-main tsg
 6.  cd tsg
 7.  sudo tsg.sh
