@@ -25,7 +25,7 @@ Open another terminal - Copy and paste:
 
 1.  sudo ./tsg.sh gandt
 2.  sudo ./tsg.sh ibmgh
-pandoc -s README.odt -t markdown -o README.md
+
 Observe that you have a working VM *client* attached to a local copy of
 docker. Type:
 
