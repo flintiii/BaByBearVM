@@ -1,30 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><!--This file was converted to xhtml by LibreOffice - see https://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for the code.--><head profile="http://dublincore.org/documents/dcmi-terms/"><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/><title xml:lang="en-US">- no title specified</title><meta name="DCTERMS.title" content="" xml:lang="en-US"/><meta name="DCTERMS.language" content="en-US" scheme="DCTERMS.RFC4646"/><meta name="DCTERMS.source" content="http://xml.openoffice.org/odf2xhtml"/><meta name="DCTERMS.modified" content="2023-06-17T17:47:24.815718805" scheme="DCTERMS.W3CDTF"/><meta name="DCTERMS.provenance" content="" xml:lang="en-US"/><meta name="DCTERMS.subject" content="," xml:lang="en-US"/><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" hreflang="en"/><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/><link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/><link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/><style type="text/css">
-    @page {  }
-    table { border-collapse:collapse; border-spacing:0; empty-cells:show }
-    td, th { vertical-align:top; font-size:12pt;}
-    h1, h2, h3, h4, h5, h6 { clear:both;}
-    ol, ul { margin:0; padding:0;}
-    li { list-style: none; margin:0; padding:0;}
-    /* "li span.odfLiEnd" - IE 7 issue*/
-    li span. { clear: both; line-height:0; width:0; height:0; margin:0; padding:0; }
-    span.footnodeNumber { padding-right:1em; }
-    span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
-    span.heading_numbering { margin-right: 0.8rem; }* { margin:0;}
-    .P1 { font-size:14pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;}
-    .P10 { font-size:14pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;}
-    .P11 { font-size:14pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;}
-    .P12 { font-size:14pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;}
-    .P13 { font-size:14pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;text-align:center ! important; color:#ff0000; }
-    .P15 { font-size:10pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;}
-    .P2 { font-size:14pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;text-align:center ! important; }
-    .P3 { font-size:14pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;text-align:center ! important; }
-    .P9 { font-size:14pt; margin-bottom:0in; margin-top:0in; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;}
-    .Preformatted_20_Text { font-size:10pt; font-family:Liberation Mono; writing-mode:horizontal-tb; direction:ltr;margin-top:0in; margin-bottom:0in; }
-    .Bullet_20_Symbols { font-family:OpenSymbol; }
-    .T3 { font-size:14pt; }
-    .T6 { font-size:14pt; }
-    .T8 { font-family:Liberation Mono; font-size:14pt; }
-    /* ODF styles with no properties representable as CSS */
-    .Numbering_20_Symbols .T1 .T10 .T12 .T2  { }
-    </style></head><body dir="ltr" style="max-width:8.5in;margin-top:0.7874in; margin-bottom:0.7874in; margin-left:0.7874in; margin-right:0.7874in; "><p class="P3">VMEMulater </p><p class="P13">The Dreaded Demonstration</p><p class="P2"> </p><p class="P1">    This is <span class="T12">the</span> guidance to help get <span class="T1">a Visual Bash Shell script </span>"tsg.sh" from github.com <span class="T1">to a local directory and repository.</span></p><p class="P1"> </p><p class="Preformatted_20_Text"><span class="T8">S</span><span class="T3">tep by step:</span></p><p class="P1"> </p><p class="P9"><span class="T2">Open a terminal - Copy and paste:</span></p><ol><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">1.</span>rm -rf main.zip tsg tsg-main<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">2.</span>Wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">3.</span>mv tsg-main tsg<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">4.</span>Unzip main.zip<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">5.</span>mv tsg-main tsg<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">6.</span>cd tsg<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">7.</span>sudo tsg.sh <span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">8.</span>sudo ./tsg.sh sane<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">9.</span>sudo ./tsg.sh vmem<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">10.</span>/usr/sbin/vm/bin/rvm370.sh<span class="odfLiEnd"/> </p></li><li><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">11.</span>/usr/sbin/vm/bin/rvm370.sh<span class="odfLiEnd"/> </p><p class="P10" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0cm"><!-- --></span><span class="odfLiEnd"/> </p></li></ol><p class="P9">Open another terminal - Copy and paste:</p><ol><li><p class="P11" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">1.</span>sudo ./tsg.sh gandt<span class="odfLiEnd"/> </p></li><li><p class="P11" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">2.</span>sudo ./tsg.sh ibmgh<span class="odfLiEnd"/> </p></li></ol><p class="P1"> </p><p class="P15"><span class="T6">Observe that you have a working VM </span><span class="T8">client</span><span class="T6"> attached to a local copy of docker. Type:</span></p><p class="P15"><span class="T6"/></p><p class="P1">Observe that you have a working VM <span class="T12">3270 </span>client attached to a local copy of docker. Type:</p><ol><li><p class="P12" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">1.</span>logon maint<span class="odfLiEnd"/> </p></li><li><p class="P12" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">2.</span>cpcms<span class="odfLiEnd"/> </p></li><li><p class="P12" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">3.</span>i cms<span class="odfLiEnd"/> </p></li><li><p class="P12" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">4.</span>l * * a<span class="odfLiEnd"/> </p></li><li><p class="P12" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">5.</span>&lt;alt&gt; 2<span class="odfLiEnd"/> </p></li><li><p class="P12" style="margin-left:0cm;"><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">6.</span>logoff<span class="odfLiEnd"/> </p></li></ol><p class="P1"> </p><p class="P1">Additional Info</p><p class="P1">    See &lt;http://docbox.flint.com:8081/vmulater&gt; for supporting docs.</p><p class="P1">Author</p><p class="P1">    Paul Flint &lt;flint@flint.com&gt;</p><p class="P1">Date</p><p class="P1"><span> 2023-06-17</span></p><p class="P1">Revision</p><p class="P1"><span> 0.008</span></p><p class="P9">    This is released under GPL <span class="T10">II</span>I</p><p class="P9"> </p></body></html>
+								VMEMulater
+						The Dreaded Demonstration
+
+This is the guidance to help get a Visual Bash Shell script "tsg.sh" from
+github.com to a local directory and repository.
+
+Step by step:
+
+Open a terminal - Copy and paste:
+  1. 1.rm -rf main.zip tsg tsg-main
+  2. 2.Wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip
+  3. 3.mv tsg-main tsg
+  4. 4.Unzip main.zip
+  5. 5.mv tsg-main tsg
+  6. 6.cd tsg
+  7. 7.sudo tsg.sh 
+  8. 8.sudo ./tsg.sh sane
+  9. 9.sudo ./tsg.sh vmem
+  10. 10./usr/sbin/vm/bin/rvm370.sh
+  11. 11./usr/sbin/vm/bin/rvm370.sh
+
+Open another terminal - Copy and paste:
+
+  1. 1.sudo ./tsg.sh gandt
+  2. 2.sudo ./tsg.sh ibmgh
+
+Observe that you have a working VM 3270 client attached to a local copy of
+docker. Type:
+
+  1. 1.logon maint
+  2. 2.cpcms
+  3. 3.i cms
+  4. 4.l * * a
+  5. 5.<alt> 2
+  6. 6.logoff
+
+Additional Info
+
+See <http://docbox.flint.com:8081/vmulater> for supporting docs.
+
+Author
+Paul Flint <flint@flint.com>
+
+Date
+2023-06-17
+
+Revision
+0.010
+
+This is released under GPL III
+
