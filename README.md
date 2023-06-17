@@ -1,50 +1,44 @@
-<p>VMEMulater</p>
-<p>The Dreaded Demonstration</p>
-<p> </p>
-<p>    This is <span class="T6">the</span> guidance to help get <span class="T1">a Visual Bash Shell script </span>"tsg.sh" from github.com <span class="T1">to a local directory and repository.</span></p>
-<p> </p>
-<p><span class="T4">S</span><span class="T2">tep by step:</span></p>
-<p> </p>
-<p>Open a terminal - Copy and paste:</p>
-<ol>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">1.</span>rm -rf main.zip tsg tsg-main<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">2.</span>Wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">3.</span>mv tsg-main tsg<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">4.</span>Unzip main.zip<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">5.</span>mv tsg-main tsg<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">6.</span>cd tsg<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">7.</span>sudo tsg.sh <span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">8.</span>sudo ./tsg.sh sane<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">9.</span>sudo ./tsg.sh vmem<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">10.</span>/usr/sbin/vm/bin/rvm370.sh<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">11.</span>/usr/sbin/vm/bin/rvm370.sh<span class="odfLiEnd"></span> </p>
-<p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0cm"></span><span class="odfLiEnd"></span> </p></li>
-</ol>
-<p>Open another terminal - Copy and paste:</p>
-<ol>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">1.</span>sudo ./tsg.sh gandt<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">2.</span>sudo ./tsg.sh ibmgh<span class="odfLiEnd"></span> </p></li>
-</ol>
-<p> </p>
-<p><span class="T3">Observe that you have a working VM </span><span class="T4">client</span><span class="T3"> attached to a local copy of docker. Type:</span></p>
-<p> </p>
-<p>Observe that you have a working VM <span class="T6">3270 </span>client attached to a local copy of docker. Type:</p>
-<ol>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">1.</span>logon maint<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">2.</span>cpcms<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">3.</span>i cms<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">4.</span>l * * a<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">5.</span>&lt;alt&gt; 2<span class="odfLiEnd"></span> </p></li>
-<li><p><span class="Numbering_20_Symbols" style="display:block;float:left;min-width:0.635cm;">6.</span>logoff<span class="odfLiEnd"></span> </p></li>
-</ol>
-<p> </p>
-<p>Additional Info</p>
-<p>    See &lt;http://docbox.flint.com:8081/vmulater&gt; for supporting docs.</p>
-<p>Author</p>
-<p>    Paul Flint &lt;flint@flint.com&gt;</p>
-<p>Date</p>
-<p><span> 2023-06-17</span></p>
-<p>Revision</p>
-<p><span> 0.008</span></p>
-<p>    This is released under GPL <span class="T5">II</span>I</p>
-<p> </p>
+                                            ﻿VMEMulater 
+                                  The Dreaded Demonstration
+
+    This is the guidance to help get a Visual Bash Shell script "tsg.sh" from github.com to a local directory and repository.
+
+Step by step:
+
+Open a terminal - Copy and paste:
+    1. rm -rf main.zip tsg tsg-main
+    2. Wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip
+    3. mv tsg-main tsg
+    4. Unzip main.zip
+    5. mv tsg-main tsg
+    6. cd tsg
+    7. sudo tsg.sh 
+    8. sudo ./tsg.sh sane
+    9. sudo ./tsg.sh vmem
+    10. /usr/sbin/vm/bin/rvm370.sh
+    11. /usr/sbin/vm/bin/rvm370.sh
+       
+Open another terminal - Copy and paste:
+    1. sudo ./tsg.sh gandt
+    2. sudo ./tsg.sh ibmgh
+
+Observe that you have a working VM client attached to a local copy of docker. Type:
+
+Observe that you have a working VM 3270 client attached to a local copy of docker. Type:
+    1. logon maint
+    2. cpcms
+    3. i cms
+    4. l * * a
+    5. <alt> 2
+    6. logoff
+
+Additional Info
+    See <http://docbox.flint.com:8081/vmulater> for supporting docs.
+Author
+    Paul Flint <flint@flint.com>
+Date
+	2023-06-17
+Revision
+	0.008
+    This is released under GPL III
+
