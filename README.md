@@ -5,9 +5,9 @@ The Dreaded Demonstration
 This is the guidance to help get a Visual Bash Shell script \"tsg.sh\"
 from github.com to a local directory and repository.
 
-*S*tep by step:
+Step by step:
 
-Open a terminal - Copy and paste:
+Open a terminal - Copy and paste:pandoc -s README.odt -t markdown -o README.md
 
 1.  rm -rf main.zip tsg tsg-main
 2.  Wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip
@@ -25,7 +25,7 @@ Open another terminal - Copy and paste:
 
 1.  sudo ./tsg.sh gandt
 2.  sudo ./tsg.sh ibmgh
-
+pandoc -s README.odt -t markdown -o README.md
 Observe that you have a working VM *client* attached to a local copy of
 docker. Type:
 
