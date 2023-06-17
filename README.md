@@ -43,15 +43,12 @@ Additional Info
 See \<http://docbox.flint.com:8081/vmulater\> for supporting docs.
 
 Author
-
 Paul Flint \<flint\@flint.com\>
 
 Date
-
 2023-06-17
 
 Revision
-
-0.008
+0.010
 
 This is released under GPL III
