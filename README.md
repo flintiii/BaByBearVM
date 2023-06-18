@@ -10,7 +10,8 @@ Open a terminal - Copy and paste these steps:
 
 1.  rm -rf main.zip tsg tsg-main
 2.  firefox  https://github.com/flintiii/tsg/archive/refs/heads/main.zip
-3.  mv Downloads/tsg-main.zip ~/tsg.zip
+3.  Save the file.
+4.  mv Downloads/tsg-main.zip ~/tsg.zip
 5.  unzip tsg.zip
 7.  cd tsg
 8.  sudo tsg.sh
