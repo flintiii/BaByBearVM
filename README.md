@@ -39,7 +39,7 @@ Update README.md
 
 Additional Info
 
-See \<http://docbox.flint.com:8081/vmulater\> for supporting docs.
+See \<http://docbox.flint.com:8081/vmulater> for supporting docs.
 
 Author
 Paul Flint \<flint\@flint.com\>
