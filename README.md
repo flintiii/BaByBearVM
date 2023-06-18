@@ -12,7 +12,7 @@ Open a terminal - Copy and paste these steps:Update README.md
 
 1.   rm -rf main.zip tsg tsg-main
 2.   firefox  https://github.com/flintiii/tsg/archive/refs/heads/main.zip
-3.   Save file, then go back to the terminalhttps://www.cs.tufts.edu/comp/150FP/archive/melinda-varian/25paper.pdf
+3.   Save file, then go back to the terminal
 4.   unzip  Downloads/tsg-main.zip -d ~/
 5.   mv ~/tsg-main tsg
 6.   cd tsg
@@ -43,7 +43,7 @@ See \<http://docbox.flint.com:8081/vmulater\> for supporting docs.
 
 Author
 Paul Flint \<flint\@flint.com\>
-
+https://www.cs.tufts.edu/comp/150FP/archive/melinda-varian/25paper.pdf
 Date
 2023-06-18
 
