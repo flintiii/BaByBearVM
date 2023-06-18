@@ -3,7 +3,7 @@
 
 This is the guidance to help get a Visual Bash Shell script \"tsg.sh\"
 from github.com to a local directory and repository.
-https://www.cs.tufts.edu/comp/150FP/archive/melinda-varian/25paper.pdf
+
 As this is done in the bash shell script, if you like use your own variation
 at your own risk...
 
@@ -17,7 +17,7 @@ Open a terminal - Copy and paste these steps:Update README.md
 5.   mv ~/tsg-main tsg
 6.   cd tsg
 7.   sudo ./tsg.sh
-8.   sudo ./tsg.sh sanehttps://www.cs.tufts.edu/comp/150FP/archive/melinda-varian/25paper.pdf
+8.   sudo ./tsg.sh sane
 9.   sudo ./tsg.sh vmem
 10.  /usr/sbin/vm/bin/rvm370.sh (do this twice)
 
