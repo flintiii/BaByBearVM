@@ -6,19 +6,18 @@ from github.com to a local directory and repository.
 
 Step by step:
 
-Open a terminal - Copy and paste:
+Open a terminal - Copy and paste these steps:
 
 1.  rm -rf main.zip tsg tsg-main
-2.  wget https://github.com/flintiii/tsg/archive/refs/heads/main.zip
-3.  mv tsg-main tsg
-4.  unzip main.zip
-5.  mv tsg-main tsg
-6.  cd tsg
-7.  sudo tsg.sh
-8.  sudo ./tsg.sh sane
-9.  sudo ./tsg.sh vmem
-10. /usr/sbin/vm/bin/rvm370.sh
+2.  firefox  https://github.com/flintiii/tsg/archive/refs/heads/main.zip
+3.  mv Downloads/tsg-main.zip ~/tsg.zip
+5.  unzip tsg.zip
+7.  cd tsg
+8.  sudo tsg.sh
+9.  sudo ./tsg.sh sane
+10.  sudo ./tsg.sh vmem
 11. /usr/sbin/vm/bin/rvm370.sh
+12. /usr/sbin/vm/bin/rvm370.sh
 
 Open another terminal - Copy and paste:
 
