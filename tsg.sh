@@ -1,9 +1,5 @@
 #!/bin/bash
-<<<<<<< HEAD
 version="0.10"
-=======
-version="0.08"
->>>>>>> b1de030c7c38875b337e9cb4ca8cd28e1425740c
 #
 # Fri 12 Jun 2023 03:02:52 PM EDT  pflint 
 # Visual Bash Script to be used with
