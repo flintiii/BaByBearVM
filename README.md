@@ -7,6 +7,9 @@ from github.com to a local directory and repository.
 As this is done in the bash shell script, if you like use your own variation
 at your own risk...
 
+For example:
+  gh repo clone flintiii/tsg
+
 Step by step:
 Open a terminal - Copy and paste these steps:Update README.md
 
