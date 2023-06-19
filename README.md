@@ -9,8 +9,8 @@ at your own risk...
 
 For example:
 
-  gh repo clone flintiii/tsg
-  git clone https://github.com/flintiii/tsg.git
+ -  gh repo clone flintiii/tsg
+ -  git clone https://github.com/flintiii/tsg.git
 
 Step by step:
 Open a terminal - Copy and paste these steps:Update README.md
