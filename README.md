@@ -24,7 +24,7 @@ Open a terminal - Copy and paste these steps:Update README.md
 Open another terminal - Copy and paste the following:
 
 1.  sudo ./tsg.sh gandt
-2.  sudo ./tsg.sh ibmgh
+2.  sudo ./tsg.sh ibmgs
 
 Observe that you have a working VM 3270 client attached to a local copy
 of the open source VM 370 in a docker server. Type:
