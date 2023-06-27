@@ -1,6 +1,5 @@
-                            VMEMulater
-                    The Dreaded Demonstration
-
+                            BaByBearVM, a Virtual Machine Emulater
+                    
 This is the guidance to help get a Visual Bash Shell script \"tsg.sh\"
 from github.com to a local directory and repository.
 
