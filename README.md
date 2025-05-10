@@ -1,54 +1,38 @@
                             BaByBearVM, a Virtual Machine Emulater
                     
-This is the guidance to help get a Visual Bash Shell script \"tsg.sh\"
-from github.com to a local directory and repository.
+THIS IS THE NEW METHOD as of 2025-05-09
 
-As this is done in the bash shell script, if you like use your own variation
-at your own risk...
+If you want to Start with local IP support for client, this works:
 
-For example:
+Log onto machine via "ssh -Y" you wish to contain the vm370 instance
 
- -  gh repo clone flintiii/BaByBearVM
- -  git clone https://github.com/flintiii/BaByBearVM.git
+ssh -Y $USER@<container>
+Where:
+$USER = Valid sudoer.
+<container> = The machine on which you want to start vm370 services.
 
-Step by step:
-Open a terminal - Copy and paste these steps:Update README.md
+Once logged on, clear possible old instance and container.
+sudo docker stop vm370; sudo docker rm vm370
 
-1.   rm -rf BaByBearVM-main.zip BaByBearVM BaByBearVM-main
-2.   firefox  https://github.com/flintiii/BaByBearVM/archive/refs/heads/main.zip
-3.   Save file, then go back to the terminal
-4.   unzip  Downloads/BaByBearVM-main.zip -d ~/
-5.   mv ~/BaByBearVM-main tsg
-6.   cd tsg
-7.   sudo ./tsg.sh
-8.   sudo ./tsg.sh sane
-9.   sudo ./tsg.sh vmem
-10.  /usr/sbin/vm/bin/rvm370.sh (do this twice)
+Copy and paste:
 
-Open another terminal - Copy and paste the following:
+sudo docker run --network=host \
+           -dit --name vm370 \
+           -p 3270:3270 -p 8038:8038 \
+           rattydave/docker-ubuntu-hercules-vm370:latest
 
-1.  sudo ./tsg.sh gandt
-2.  sudo ./tsg.sh ibmgs
+This will ask for your root password, set the container instance up, and return you to your
+$USER account.
 
-Observe that you have a working VM 3270 client attached to a local copy
-of the open source VM 370 in a docker server. Type:
-Update README.md
-1.  logon maint (twice?)
-2.  cpcmsUpdate README.md
-3.  i cms
-4.  l \* \* a
-5.  \<alt\> 2
-6.  logoff
-7.  Exit x3270
+Because the IP address is the same as the host, The 3270 docker instance needs to open with on the same machine, the following line:
 
-Additional Info
+x3270 $(hostname -i):3270 &
 
-See \<http://docbox.flint.com:8081/bbbvm.org \> for supporting docs.
+Your 3270 terminal should open.
 
-Author
-Paul Flint \<flint\@flint.com\>
-Date
-2023-06-18
+
+
+To find out more about VM/370, click Here
 
 Revision
 0.010
